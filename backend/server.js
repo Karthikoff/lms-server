@@ -19,8 +19,8 @@ connectDB();
 const app = express();
 app.use(express.json());
 app.use(express.json({ limit: "1000mb" }));
-
-app.use(cors({ origin: "http://localhost:3000", credentials: true })); // Update this with your frontend URL
+// app.use(cors())
+app.use(cors({ origin: "https://lms-server-production-4028.up.railway.app", credentials: true })); // Update this with your frontend URL
 console.log("EMAIL_USER:", process.env.EMAIL_USER);
 console.log("EMAIL_PASS:", process.env.EMAIL_PASS ? "Loaded" : "Not Loaded");
 
